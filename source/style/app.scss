@@ -1,0 +1,66 @@
+$responsive: true;
+
+/* --------- colors --------- */
+
+$yellow: #f1ca14;
+$black: #2d2d31;
+
+/* --------- common classes --------- */
+
+.heading-wrap {
+    width: 100%;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flex;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.heading {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #343434;
+}
+
+.titile-wrap {
+    text-align: center;
+}
+
+.title {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 14px;
+    color: #444444;
+    text-transform: uppercase;
+}
+
+.close-btn {
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        fill: #666666;
+    }
+}
+
+/* --------- adjustment --------- */
+
+@import "_misc/font-awesome";
+@import "_misc/fonts";
+@import "_misc/mixins";
+@import "_misc/adjustment";
+
+/* --------- common --------- */
+
+@import "common/_logo";
+@import "common/_form";
+
+/* --------- sections --------- */
+@import "sections/_manager";
+// @import "sections/**/*";

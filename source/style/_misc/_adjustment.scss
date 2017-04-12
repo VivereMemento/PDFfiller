@@ -1,0 +1,123 @@
+/* --------- adjustment --------- */
+
+$container-width: 1144px;
+$footer-height: 50px;
+$body-font: 'Arial';
+
+html {
+	width:100%;
+	font-size: 100.01%;
+	height: 100%;
+
+	@if $responsive == true {
+		@include desktop {
+			font-size: 16px;
+		}
+
+		@include laptop {
+			font-size: 14px;
+		}
+
+		@include tablets {
+			font-size: 12px;
+		}
+
+		@include phones {
+			font-size: 12px;
+		}
+	}
+}
+
+body {
+	font: 13px/13px $body-font;
+	color: #666666;
+    -webkit-font-smoothing: antialiased;
+	width:100%;
+	height:100% !important;
+	background: #7f7f7f;
+}
+
+.container {
+    margin: 0 auto;
+    position: relative;
+    width: $container-width;
+	display: -webkit-inline-flex;
+    display: -ms-inline-flex;
+    display: flex;
+    justify-content: space-between;
+	flex-direction: row;
+
+	@if $responsive == true {
+		@include desktop {
+			width: 970px;
+		}
+
+		@include laptop {
+			width: 750px;
+		}
+
+		@include tablets {
+			width: 480px;
+		}
+
+		@include phones {
+			width: auto;
+		}
+	}
+}
+
+.wrapper {
+    position: relative;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    overflow: hidden;
+	//min-width: if($responsive == true, 100%, $container-width + 30px);
+
+	&:after {
+		content: "";
+		display: block;
+		position: relative;
+		height: $footer-height;
+	}
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+
+	li {
+		padding: 0;
+		margin: 0;
+		list-style: none outside none;
+	}
+}
+
+p {
+	padding: 0;
+	margin: 0;
+}
+
+figure {
+	margin: 0;
+}
+
+footer {
+	position: relative;
+	//min-width: if($responsive == true, 100%, $container-width + 30);
+	height: $footer-height;
+	margin-top: -$footer-height;
+	//position: absolute;
+	//bottom: 0;
+	//left: 0;
+	//right: 0;
+}
+
+* {
+	box-sizing: border-box;
+}

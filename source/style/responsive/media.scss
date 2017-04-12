@@ -1,0 +1,34 @@
+$grids: 12;
+$gutters: 1/3;
+
+$breakpoint-default-feature: max-width;
+$base-font-size: 16px;
+
+@mixin desktop {
+	@include breakpoint(1200px) {
+		@content;
+	}
+}
+
+@mixin laptop {
+	@include breakpoint(992px) {
+		@content;
+	}
+}
+
+@mixin tablets {
+	@include breakpoint(768px) {
+		@content;
+	}
+}
+
+@mixin phones {
+	@include breakpoint(480px) {
+		@content;
+	}
+}
+
+@function rem($target, $context: $base-font-size) {
+	@if $target == 0 { @return 0 }
+	@return $target / $context + 0rem;
+}

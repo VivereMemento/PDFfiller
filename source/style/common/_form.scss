@@ -1,0 +1,32 @@
+.form {
+
+    &__input-wrap {
+        width: 264px;
+        margin-top: 10px;
+        border-radius: 3px;
+        background-color: #ffffff;
+        border: solid 1px #cccccc;
+        display: inline-block;
+    }
+
+    &__input {
+        width: 100%;
+        padding: 6px 10px;
+        border: none;
+        box-shadow: inset 1px 1px 2px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    &__btn {
+        padding: 8px 34px;
+        color: #fff;
+        border-radius: 3px;
+        background-image: linear-gradient(to bottom, #ff9000, #fd7722);
+        border: none;
+        cursor: pointer;
+        display: inline-block;
+
+        &:hover {
+            background-image: linear-gradient(to bottom, #fd7722, #ff9000);
+        }
+    }
+}
