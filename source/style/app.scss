@@ -24,7 +24,7 @@ $black: #2d2d31;
     color: #343434;
 }
 
-.titile-wrap {
+.title-wrap {
     text-align: center;
 }
 
@@ -50,8 +50,6 @@ $black: #2d2d31;
 }
 
 /* --------- adjustment --------- */
-
-@import "_misc/font-awesome";
 @import "_misc/fonts";
 @import "_misc/mixins";
 @import "_misc/adjustment";
@@ -60,6 +58,7 @@ $black: #2d2d31;
 
 @import "common/_logo";
 @import "common/_form";
+@import "common/_promo";
 
 /* --------- sections --------- */
 @import "sections/_manager";

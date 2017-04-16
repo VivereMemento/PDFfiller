@@ -22,7 +22,7 @@ block content
                         .manager__content-img-wrap
                             svg.manager__content-img
                                 use(xlink:href="assets/img/sprite.svg#type")
-                            .titile-wrap
+                            .title-wrap
                                 h2.title Type
                         .manager__content-login
                             .manager__content-text.manager__content-text_mods 
@@ -34,60 +34,16 @@ block content
                                 input.form__btn(type="submit" value="Sign")
                         .manager__content-user
                             span.manager__content-user-name John Smith
-                    -
-                        var items = [
-                                        { title: "Draw", img: "draw"},
-                                        { title: "Use camer", img: "camera"},
-                                        { title: "Use mobile vea sms", img: "sms-mobile"},
-                                        { title: "Upload", img: "upload"},
-                                        { title: "Vea qr code", img: "qr-mobile"},
-                                        { title: "Use mobile vea email", img: "email-mobile"}
-                                    ]
+
                     ul.manager__content-list
                         each item in items
                             li.manager__content-item
+                                +promo
                                 .manager__content-img-wrap
                                     svg.manager__content-img
                                         use(xlink:href="assets/img/sprite.svg#" + item.img)
                                 .manager__content-discription
-                                    .titile-wrap.manager__title-wrap_mods
+                                    .title-wrap.manager__title-wrap_mods
                                         h2.title #{item.title}
                                     .manager__content-text 
                                         | Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            aside.manager__right
-                .manager__right-header
-                    .manager__right-header-top
-                        .manager__right-address
-                            .manager__right-address-site
-                                span.site bohemiancoding.com
-                            .close-btn.manager__close-btn_mods
-                                svg.close-btn__img.manager__close-btn-img_color
-                                    use(xlink:href="assets/img/sprite.svg#shape")
-                    .manager__header
-                        .heading-wrap.manager__heading-wrap_mods
-                            h1.heading.manager__heading_mods Create Your Signature
-                        .close-btn.manager__close-btn_mods
-                            svg.close-btn__img
-                                use(xlink:href="assets/img/sprite.svg#shape")
-                -
-                    var items = [
-                                    { title: "Draw", img: "draw"},
-                                    { title: "Type", img: "type"},
-                                    { title: "Upload", img: "upload"},
-                                    { title: "Use camera", img: "camera"}
-                                ]
-                ul.manager__content-list.manager__content-list_mods
-                    each item in items
-                        li.manager__content-item.manager__content-item_mods
-                            .manager__content-img-wrap
-                                svg.manager__content-img
-                                    use(xlink:href="assets/img/sprite.svg#" + item.img)
-                            .manager__content-discription
-                                .titile-wrap.manager__title-wrap_mods
-                                    h2.title #{item.title}
-                                .manager__content-text 
-                                    | Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        
-                    
-                    
-                    
